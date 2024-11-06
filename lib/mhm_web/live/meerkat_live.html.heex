@@ -1,0 +1,30 @@
+<div>
+  <.live_component module={MhmWeb.FilterComponent} id="filter"   />
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <.live_component module={MhmWeb.SortingComponent}
+            id={"sorting-id"}
+            key={:id}
+            sorting={@sorting} />
+      </th>
+      <th>
+        <.live_component module={MhmWeb.SortingComponent}
+            id={"sorting-name"}
+            key={:name}
+            sorting={@sorting} />
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for meerkat <- @meerkats do %>
+          <tr data-test-id={meerkat.id}>
+            <td><%= meerkat.id %></td>
+            <td><%= meerkat.name %></td>
+          </tr>
+        <% end %>
+  </tbody>
+<!-- Table body -->
+</table>

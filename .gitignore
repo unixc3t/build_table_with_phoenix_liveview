@@ -1,0 +1,6 @@
+_build/
+.elixir_ls/
+.idea/
+mix.lock
+erl_crash.dump
+mhm.iml
