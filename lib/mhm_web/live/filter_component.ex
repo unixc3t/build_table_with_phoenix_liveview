@@ -2,20 +2,19 @@ defmodule MhmWeb.FilterComponent do
   use MhmWeb, :live_component
 
   alias MhmWeb.Forms.FilterForm
-  alias Mhm.Meerkats
 
   def render(assigns) do
     ~H"""
-    <div>
+    <div id="table-filter">
       <.simple_form for={@form} phx-submit="search" phx-target={@myself}>
-        <div>
-          <div>
+        <div class="row">
+          <div class="w-15">
             <.input field={@form[:id]} type="text" label="id" />
           </div>
-          <div>
+          <div class="w-30">
             <.input field={@form[:name]} type="text" label="name" />
           </div>
-          <.button>search</.button>
+            <.button >search</.button>
         </div>
       </.simple_form>
     </div>

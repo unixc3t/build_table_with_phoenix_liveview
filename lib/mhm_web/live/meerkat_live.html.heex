@@ -1,6 +1,5 @@
-<div>
+<div id="table-container">
   <.live_component module={MhmWeb.FilterComponent} id="filter"   />
-</div>
 <table>
   <thead>
     <tr>
@@ -26,5 +25,8 @@
           </tr>
         <% end %>
   </tbody>
-<!-- Table body -->
 </table>
+
+  <.live_component module={MhmWeb.PaginationComponent} id="pagination" 
+      pagination={@pagination} />
+</div>
